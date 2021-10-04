@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Placement</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+      .box{
+        box-shadow: 0px 0px 10px inset white;
+        border-radius: 10px;
+        margin-top: 50px;
+        padding: 15px;
+        background: linear-gradient(to top, whitesmoke, white);
+      }
+      body{
+        /*background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmJo6EsJjTnhdV7Rj1DTTOvkzq-LqXIYlO80h1HCuOwrU0HtmqqeTLBWJbWFkj-6rpPWQ&usqp=CAU');*/
+        background-size: 100%;
+        background-attachment: fixed;
+        text-transform: capitalize;
+        font-family: gabriola;
+      }
+      .form-control{
+        zoom: 1.5;
+      }
+      .btn-purple{
+        background: purple !important;
+        color: white;
+      }
+  </style>
+</head>
+    <body>
+        <div class="col-lg-4 col-lg-offset-1" style="padding-top: 150px;">
+            <img src="https://i.pinimg.com/originals/46/19/8a/46198a77434d51566c8ca2c58e212bb8.png" class="img-responsive" style="width: 100%;">
+        </div>
+        <form class="col-lg-6 box" action='http://127.0.0.1:5000/prediction' method='post'>
+            <div class="form-group col-lg-12">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <img src="https://www.pngkey.com/png/full/269-2694716_online-job-portal-apps-.png" class="img-responsive">
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 class="text-center">Job Placement</h2>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>AGE:</label>
+                <input type="number" min="19" max="30" name="age" class="form-control">
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Gender:</label>
+                <select class="form-control" name="gender">
+                    <option value=1>Male</option>
+                    <option value=0>Female</option>
+                </select>
+                <!-- <input type='number' name='gender' class="form-control"> -->
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Stream:</label>
+                <select class="form-control" name="stream">
+                    <option>Electronics And Communication</option>
+                    <option>Computer Science</option>
+                    <option>Mechanical</option>
+                    <option>Information Technology</option>
+                    <option>Civil</option>
+                    <option>Electrical</option>
+                </select>
+                <!-- <input type='number' name='stream' class="form-control"> -->
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Internships:</label>
+                <input type='number' min="0" max="3" name='internships' class="form-control">
+            </div>
+            <div class="form-group col-lg-6">
+                <label>CGPA:</label>
+                <input type='number' min="0" name='cgpa' class="form-control">
+            </div>
+            <div class="form-group col-lg-6">
+                <label>Hostel:</label>
+                <select class="form-control" name="hostel">
+                    <option value=0>Not Taken</option>
+                    <option value=1>Taken</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-6">
+                <label>History of backlogs:</label>
+                <select class="form-control" name="backlogs">
+                    <option value=1>Have Backlogs</option>
+                    <option value=0>No Backlogs</option>
+                </select>
+                <!-- <input type='number' min="0" name="backlogs" class="form-control"> -->
+            </div>
+            <div class="form-group col-lg-12">
+                <input type='SUBMIT' class="btn btn-purple btn-lg">
+            </div>
+            <div class="form-group text-center col-lg-12">
+                <h3 style="word-spacing: 10px;">prediction:{{output}}</h3>
+            </div>
+
+        </form>
+    </body>
+</html>
