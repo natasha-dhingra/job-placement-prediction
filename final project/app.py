@@ -14,7 +14,7 @@ def prediction():
     age=request.form['age']
     gender=request.form['gender'] 
     stream=request.form['stream']
-    hostel=request.form['hostel']
+    hostel=0
     cgpa=request.form['cgpa']
     backlogs=request.form['backlogs']
     internships=request.form['internships']
